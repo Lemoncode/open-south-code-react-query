@@ -26,58 +26,13 @@
     },
     {
       "id": 3,
-      "description": "third todo",
+      "description": "test",
       "isDone": false
     },
     {
       "id": 4,
-      "description": "oranges",
+      "description": "otro",
       "isDone": false
-    },
-    {
-      "id": 5,
-      "description": "apples",
-      "isDone": false
-    },
-    {
-      "id": 6,
-      "description": "eggs",
-      "isDone": false
-    },
-    {
-      "id": 7,
-      "description": "oil",
-      "isDone": false
-    },
-    {
-      "id": 8,
-      "description": "tuna",
-      "isDone": false
-    },
-    {
-      "id": 9,
-      "description": "sugar",
-      "isDone": true
-    },
-    {
-      "id": 10,
-      "description": "rice",
-      "isDone": false
-    },
-    {
-      "id": 11,
-      "description": "ice-cream",
-      "isDone": false
-    },
-    {
-      "id": 12,
-      "description": "Patatas",
-      "isDone": false
-    },
-    {
-      "id": 13,
-      "description": "Peras actualizado",
-      "isDone": true
     }
   ]
 }

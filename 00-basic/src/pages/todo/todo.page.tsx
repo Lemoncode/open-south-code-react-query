@@ -13,7 +13,7 @@ import { TodoItemComponent, TodoAppendComponent } from "./components";
 
 const useTodoQueries = () => {
   const handleSaveSuccess = () => {
-    queryClient.invalidateQueries(todoKeys.todoList());
+    //queryClient.invalidateQueries(todoKeys.todoList());
   };
 
   const queryClient = useQueryClient();

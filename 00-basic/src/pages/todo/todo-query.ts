@@ -3,7 +3,10 @@ import { getTodoList, updateTodoItem, appendTodoItem } from "./todo.api";
 import { todoKeys } from "./todo-key-queries";
 
 export const useTodoListQuery = () => {
-  return useQuery(todoKeys.todoList(), () => getTodoList());
+  return useQuery(todoKeys.todoList(), () => getTodoList(), {
+    refetchOnMount: true,
+    staleTime: 60000,
+  });
 };
 
 export const useUpdateTodoItemMutation = (onSuccessFn: () => void) => {
@@ -12,5 +15,5 @@ export const useUpdateTodoItemMutation = (onSuccessFn: () => void) => {
   });
 };
 
- export const useAppendTodoItemMutation = (onSuccessFn: () => void) => 
-  useMutation(appendTodoItem, {onSuccess: () => onSuccessFn()});
+export const useAppendTodoItemMutation = (onSuccessFn: () => void) =>
+  useMutation(appendTodoItem, { onSuccess: () => onSuccessFn() });
