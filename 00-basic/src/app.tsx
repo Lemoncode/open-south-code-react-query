@@ -7,14 +7,19 @@ import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 
 export const App = () => {
   return (
-    <QueryClientProvider client={queryClient}>
-      <HashRouter>
-        <Routes>
-          <Route path="/" element={<TodoPage />} />
-          <Route path="/list" element={<ListPage />} />
-        </Routes>
-      </HashRouter>
-      <ReactQueryDevtools />
-    </QueryClientProvider>
+    <>
+      {/* Ponemos el provider de React Query para que wrapee la aplicación completa */}
+      <QueryClientProvider client={queryClient}>
+        <HashRouter>
+          <Routes>
+            <Route path="/" element={<TodoPage />} />
+            <Route path="/list" element={<ListPage />} />
+          </Routes>
+        </HashRouter>
+        {/* Decimos que vamos a usar las dev tools, por defecto en producción no se ve*/}
+        {/* Es un paquete externo, mirar package.json */}
+        <ReactQueryDevtools />
+      </QueryClientProvider>
+    </>
   );
 };
