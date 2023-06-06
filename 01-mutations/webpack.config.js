@@ -70,4 +70,7 @@ module.exports = {
       template: "index.html", //Name of template in ./src
     }),
   ],
+  devServer: {
+    port: 8082,
+  },
 };
