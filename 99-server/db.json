@@ -1,43 +1,19 @@
 {
-  "lists": [
-    {
-      "id": 1,
-      "name": "test list"
-    },
-    {
-      "id": 2,
-      "name": "groceries"
-    },
-    {
-      "id": 3,
-      "name": "tasks"
-    }
-  ],
   "todos": [
     {
       "id": 1,
-      "description": "whatever",
+      "description": "hola",
       "isDone": false
     },
     {
       "id": 2,
-      "description": "second todo",
+      "description": "Open South Code",
       "isDone": true
     },
     {
       "id": 3,
-      "description": "test",
-      "isDone": false
-    },
-    {
-      "id": 4,
-      "description": "otro",
-      "isDone": false
-    },
-    {
-      "id": 5,
-      "description": "tttes",
-      "isDone": false
+      "description": "2023",
+      "isDone": true
     }
   ]
 }

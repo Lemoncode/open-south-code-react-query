@@ -28,10 +28,7 @@ export const TodoPage: React.FC = () => {
         return res.data;
       });
     },
-    {
-      //refetchOnMount: true,
-      staleTime: 15000,
-    }
+    {}
   );
 
   return (
@@ -40,10 +37,10 @@ export const TodoPage: React.FC = () => {
       <div className={classes.todoList}>
         {/* Comprobamos si _data_ no es null */}
         {data?.map((todo) => (
-          <>
+          <React.Fragment key={todo.id}>
             <div>{todo.isDone ? "✅" : "⭕️"}</div>
             <div>{todo.description}</div>
-          </>
+          </React.Fragment>
         ))}
       </div>
       <Link to="/list">To List</Link>
