@@ -18,8 +18,14 @@ export const TodoPage: React.FC = () => {
         refetchOnMount: true, // [Def true] Si queremos que se recargue la query al montar el componente
         staleTime: 15000, // [Def 0] Tiempo en milisegundos que queremos que la query se considere "stale" (obsoleta) y se recargue
         cacheTime: 1000 * 60 * 5, // [Def 5 mins] Mantiene en cache los datos (aunque algo esté obsoleto primero lee de aquí y después hace la petición)
-        interval: 1000 * 60 * 5, // Esto es para que cada 5 minutos se refresque la información
+        refetchInterval: 5000, // Esto es para que cada 5 segundos se refresque la información
+        refetchIntervalInBackground: true, // Si queremos que se refresque en segundo plano
       }
+
+      --> Probamos refetchOnWindowFocus: false / true
+      --> Probamos refetchOnMount: false / true navegación página
+      --> Hablamos sobre cacheTime vs StateTime (despues ventanas veremos e invalidar)
+      --> interval
   */
   const { data } = useQuery(
     ["todolist"],
@@ -28,7 +34,9 @@ export const TodoPage: React.FC = () => {
         return res.data;
       });
     },
-    {}
+    {
+      refetchInterval: 5000,
+    }
   );
 
   return (
