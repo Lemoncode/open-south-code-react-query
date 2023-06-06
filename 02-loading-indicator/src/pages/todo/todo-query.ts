@@ -1,6 +1,7 @@
 import { useQuery, useMutation } from "@tanstack/react-query";
 import { getTodoList, updateTodoItem, appendTodoItem } from "./todo.api";
 import { todoKeys } from "./todo-key-queries";
+import { trackPromise } from "react-promise-tracker";
 
 export const useTodoListQuery = () => {
   /*
@@ -14,6 +15,7 @@ export const useTodoListQuery = () => {
     refetchIntervalInBackground: true, // Si queremos que se refresque en segundo plano
   }
 */
+  //return useQuery(todoKeys.todoList(), () => trackPromise(getTodoList()));
   return useQuery(todoKeys.todoList(), () => getTodoList());
 };
 

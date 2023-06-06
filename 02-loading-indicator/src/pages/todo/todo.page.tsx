@@ -17,11 +17,12 @@ const useTodoQueries = () => {
   };
 
   const queryClient = useQueryClient();
-  const { data, isLoading, isFetching } = useTodoListQuery();
-  //const { data } = useTodoListQuery();
+  //const { data, isLoading, isFetching } = useTodoListQuery();
+  const { data } = useTodoListQuery();
   const updateMutation = useUpdateTodoItemMutation(handleSaveSuccess);
   const appendMutation = useAppendTodoItemMutation(handleSaveSuccess);
 
+  /*
   React.useEffect(() => {
     if (isFetching) {
       console.log("Loading...");
@@ -29,7 +30,8 @@ const useTodoQueries = () => {
       console.log("Done loading...");
     }
   }, [isFetching]);
-
+  */
+ 
   return {
     data,
     updateMutation,
