@@ -8,13 +8,13 @@ import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 export const App = () => {
   return (
     <QueryClientProvider client={queryClient}>
-      <ReactQueryDevtools initialIsOpen={false} />
       <HashRouter>
         <Routes>
           <Route path="/" element={<TodoPage />} />
           <Route path="/list" element={<ListPage />} />
         </Routes>
       </HashRouter>
+      <ReactQueryDevtools />
     </QueryClientProvider>
   );
 };
