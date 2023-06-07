@@ -34,9 +34,7 @@ export const TodoPage: React.FC = () => {
         return res.data;
       });
     },
-    {
-      refetchInterval: 5000,
-    }
+    {}
   );
 
   return (
